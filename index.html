@@ -95,7 +95,6 @@ body::before {
 
 /* LAYOUT */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
-
 section { position: relative; z-index: 2; }
 
 /* NAVBAR */
@@ -260,7 +259,6 @@ body { top: 0 !important; }
   display: flex; gap: 40px; margin-top: 56px;
   animation: fadeSlideUp 0.8s 0.4s ease both;
 }
-.stat-item {}
 .stat-number {
   font-family: 'Syne', sans-serif;
   font-size: 32px; font-weight: 800;
@@ -309,23 +307,11 @@ body { top: 0 !important; }
   padding: 14px 18px;
   z-index: 2;
 }
-.hero-card-float.left {
-  left: -28px; bottom: 80px;
-}
-.hero-card-float.right {
-  right: -28px; top: 80px;
-}
-.card-float-label {
-  font-size: 11px; color: var(--text-muted);
-  text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px;
-}
-.card-float-value {
-  font-family: 'Syne', sans-serif;
-  font-size: 16px; font-weight: 700; color: var(--white);
-}
-.card-float-sub {
-  font-size: 12px; color: var(--cyan);
-}
+.hero-card-float.left { left: -28px; bottom: 80px; }
+.hero-card-float.right { right: -28px; top: 80px; }
+.card-float-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
+.card-float-value { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--white); }
+.card-float-sub { font-size: 12px; color: var(--cyan); }
 
 /* SECTION HEADERS */
 .section-header { margin-bottom: 64px; }
@@ -335,9 +321,7 @@ body { top: 0 !important; }
   text-transform: uppercase; letter-spacing: 2px;
   margin-bottom: 16px;
 }
-.section-tag::before {
-  content: ''; width: 24px; height: 1.5px; background: var(--cyan);
-}
+.section-tag::before { content: ''; width: 24px; height: 1.5px; background: var(--cyan); }
 .section-title {
   font-family: 'Syne', sans-serif;
   font-size: clamp(32px, 4vw, 52px);
@@ -345,528 +329,205 @@ body { top: 0 !important; }
   line-height: 1.1;
   margin-bottom: 16px;
 }
-.section-desc {
-  font-size: 17px; color: var(--text-secondary);
-  max-width: 560px; line-height: 1.75;
-}
+.section-desc { font-size: 17px; color: var(--text-secondary); max-width: 560px; line-height: 1.75; }
 
 /* ABOUT */
 .about { padding: 120px 0; }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px; align-items: center;
-}
-.about-text p {
-  color: var(--text-secondary);
-  margin-bottom: 20px; font-size: 17px; line-height: 1.8;
-}
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-text p { color: var(--text-secondary); margin-bottom: 20px; font-size: 17px; line-height: 1.8; }
 .about-text p strong { color: var(--text-primary); }
-.about-values {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px;
-}
+.about-values { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
 .value-item {
   display: flex; align-items: flex-start; gap: 12px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 16px;
-  transition: var(--transition);
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 16px; transition: var(--transition);
 }
-.value-item:hover {
-  border-color: var(--border-glow);
-  background: var(--cyan-glow);
-}
+.value-item:hover { border-color: var(--border-glow); background: var(--cyan-glow); }
 .value-icon { font-size: 20px; margin-top: 2px; flex-shrink: 0; }
 .value-text { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
 .value-text strong { color: var(--text-primary); display: block; margin-bottom: 2px; font-size: 15px; }
 
 /* TOOLS VISUAL */
 .tools-visual {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px; padding: 40px;
-  position: relative; overflow: hidden;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 40px; position: relative; overflow: hidden;
 }
 .tools-visual::before {
-  content: '';
-  position: absolute;
-  width: 300px; height: 300px;
+  content: ''; position: absolute; width: 300px; height: 300px;
   background: radial-gradient(circle, rgba(0,210,255,0.05) 0%, transparent 70%);
   right: -50px; bottom: -50px;
 }
-.tool-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
-}
+.tool-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .tool-chip {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border);
-  border-radius: 8px; padding: 12px;
-  text-align: center;
-  font-size: 13px; color: var(--text-secondary);
-  font-weight: 500;
-  transition: var(--transition);
-  cursor: default;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px; text-align: center;
+  font-size: 13px; color: var(--text-secondary); font-weight: 500;
+  transition: var(--transition); cursor: default;
 }
-.tool-chip:hover {
-  border-color: var(--border-glow);
-  color: var(--cyan);
-  background: var(--cyan-dim);
-  transform: translateY(-2px);
-}
+.tool-chip:hover { border-color: var(--border-glow); color: var(--cyan); background: var(--cyan-dim); transform: translateY(-2px); }
 .tool-chip .tool-icon { font-size: 20px; display: block; margin-bottom: 6px; }
 
 /* SKILLS */
 .skills { padding: 80px 0 120px; }
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.skill-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px;
-  transition: var(--transition);
-  position: relative; overflow: hidden;
-}
-.skill-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-  opacity: 0;
-  transition: var(--transition);
-}
-.skill-card:hover {
-  border-color: var(--border-glow);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,210,255,0.1);
-}
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.skill-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: var(--transition); position: relative; overflow: hidden; }
+.skill-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--cyan), transparent); opacity: 0; transition: var(--transition); }
+.skill-card:hover { border-color: var(--border-glow); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,210,255,0.1); }
 .skill-card:hover::before { opacity: 1; }
-.skill-icon {
-  width: 52px; height: 52px;
-  background: var(--cyan-dim);
-  border: 1px solid var(--border-glow);
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 24px; margin-bottom: 20px;
-}
-.skill-name {
-  font-family: 'Syne', sans-serif;
-  font-size: 18px; font-weight: 700;
-  margin-bottom: 10px;
-}
-.skill-desc {
-  font-size: 14px; color: var(--text-secondary);
-  line-height: 1.6; margin-bottom: 20px;
-}
+.skill-icon { width: 52px; height: 52px; background: var(--cyan-dim); border: 1px solid var(--border-glow); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
+.skill-name { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+.skill-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.skill-tag {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border);
-  border-radius: 6px; padding: 4px 10px;
-  font-size: 12px; color: var(--text-muted);
-}
+.skill-tag { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 12px; color: var(--text-muted); }
 
 /* EXPERIENCE */
 .experience { padding: 80px 0; }
 .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.exp-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 36px;
-  position: relative; overflow: hidden;
-  transition: var(--transition);
-}
-.exp-card::after {
-  content: '';
-  position: absolute; right: -40px; bottom: -40px;
-  width: 120px; height: 120px;
-  background: radial-gradient(circle, var(--cyan-dim) 0%, transparent 70%);
-  pointer-events: none;
-}
-.exp-card:hover {
-  border-color: var(--border-glow);
-  transform: translateY(-3px);
-}
+.exp-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; position: relative; overflow: hidden; transition: var(--transition); }
+.exp-card::after { content: ''; position: absolute; right: -40px; bottom: -40px; width: 120px; height: 120px; background: radial-gradient(circle, var(--cyan-dim) 0%, transparent 70%); pointer-events: none; }
+.exp-card:hover { border-color: var(--border-glow); transform: translateY(-3px); }
 .exp-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; }
-.exp-company {
-  font-family: 'Syne', sans-serif;
-  font-size: 20px; font-weight: 700; margin-bottom: 4px;
-}
+.exp-company { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 4px; }
 .exp-role { font-size: 14px; color: var(--cyan); font-weight: 500; }
-.exp-badge {
-  background: var(--gold-dim);
-  border: 1px solid rgba(240,165,0,0.25);
-  color: var(--gold);
-  padding: 4px 12px; border-radius: 100px;
-  font-size: 12px; font-weight: 600; white-space: nowrap;
-}
-.exp-desc {
-  color: var(--text-secondary); font-size: 15px;
-  line-height: 1.7; margin-bottom: 20px;
-}
+.exp-badge { background: var(--gold-dim); border: 1px solid rgba(240,165,0,0.25); color: var(--gold); padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.exp-desc { color: var(--text-secondary); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
 .exp-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.exp-list li {
-  font-size: 14px; color: var(--text-secondary);
-  padding-left: 16px; position: relative; line-height: 1.6;
-}
-.exp-list li::before {
-  content: '→'; position: absolute; left: 0;
-  color: var(--cyan); font-size: 13px;
-}
+.exp-list li { font-size: 14px; color: var(--text-secondary); padding-left: 16px; position: relative; line-height: 1.6; }
+.exp-list li::before { content: '→'; position: absolute; left: 0; color: var(--cyan); font-size: 13px; }
 
 /* PROJECTS */
 .projects { padding: 80px 0; }
-.projects-filter { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
-.filter-btn {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
-  padding: 8px 20px; border-radius: 100px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px; font-weight: 500;
-  cursor: pointer; transition: var(--transition);
-}
-.filter-btn.active, .filter-btn:hover {
-  border-color: var(--cyan);
-  color: var(--cyan);
-  background: var(--cyan-dim);
-}
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.project-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: var(--transition);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-}
-.project-card:hover {
-  border-color: var(--border-glow);
-  transform: translateY(-6px);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
-}
-.project-thumb {
-  height: 180px;
-  position: relative; overflow: hidden;
-  display: flex; align-items: center; justify-content: center;
-}
-.project-thumb img {
-  width: 100%; height: 100%; object-fit: cover; opacity: 0.65; transition: opacity 0.3s;
-}
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: var(--transition); cursor: pointer; display: flex; flex-direction: column; }
+.project-card:hover { border-color: var(--border-glow); transform: translateY(-6px); box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
+.project-thumb { height: 180px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; opacity: 0.65; transition: opacity 0.3s; }
 .project-card:hover .project-thumb img { opacity: 0.9; }
-.project-thumb-inner {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 64px; opacity: 0.15;
-  transition: var(--transition);
-}
+.project-thumb-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 64px; opacity: 0.15; transition: var(--transition); }
 .project-card:hover .project-thumb-inner { opacity: 0.25; transform: scale(1.1); }
-.project-thumb-label {
-  position: absolute; bottom: 12px; right: 12px;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border);
-  border-radius: 6px; padding: 4px 10px;
-  font-size: 11px; color: var(--cyan); font-weight: 600;
-  text-transform: uppercase; letter-spacing: 0.8px;
-}
+.project-thumb-label { position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 11px; color: var(--cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; }
 .project-body { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
-.project-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 18px; font-weight: 700;
-  margin-bottom: 8px; line-height: 1.3;
-}
-.project-desc {
-  font-size: 14px; color: var(--text-secondary);
-  line-height: 1.65; margin-bottom: 16px; flex-grow: 1;
-}
+.project-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+.project-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 16px; flex-grow: 1; }
 .project-meta { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
 .project-stack { display: flex; gap: 6px; flex-wrap: wrap; }
-.project-tag {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border);
-  border-radius: 5px; padding: 3px 8px;
-  font-size: 11px; color: var(--text-muted);
-}
-.project-arrow {
-  color: var(--cyan); font-size: 18px;
-  transition: var(--transition);
-}
+.project-tag { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 5px; padding: 3px 8px; font-size: 11px; color: var(--text-muted); }
+.project-arrow { color: var(--cyan); font-size: 18px; transition: var(--transition); }
 .project-card:hover .project-arrow { transform: translateX(4px); }
+.project-thumb.framed { padding: 10px; border-radius: 12px; position: relative; overflow: hidden; }
+.project-thumb.framed::before { content: ''; position: absolute; inset: -1px; border-radius: 12px; background: linear-gradient(135deg, var(--cyan) 0%, transparent 50%, var(--gold) 100%); z-index: -1; padding: 1px; }
+.project-thumb.framed img { width: 100%; height: 100%; object-fit: contain; border-radius: inherit; filter: grayscale(10%) contrast(1.05); }
 
-/* Project Image Framed */
-.project-thumb.framed {
-  padding: 10px;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-}
-.project-thumb.framed::before {
-  content: '';
-  position: absolute; inset: -1px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--cyan) 0%, transparent 50%, var(--gold) 100%);
-  z-index: -1;
-  padding: 1px;
-}
-.project-thumb.framed img {
-  width: 100%; height: 100%;
-  object-fit: contain;
-  border-radius: inherit;
-  filter: grayscale(10%) contrast(1.05);
-}
-
-/* AI SECTION */
+/* AI SECTION & INTERACTIVE TERMINAL */
 .ai-section { padding: 80px 0; }
-.ai-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px; align-items: start;
-}
+.ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 .ai-feature-list { display: flex; flex-direction: column; gap: 20px; }
-.ai-feature {
-  display: flex; gap: 20px; align-items: flex-start;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 24px;
-  transition: var(--transition);
-}
-.ai-feature:hover {
-  border-color: var(--border-glow);
-  background: var(--cyan-glow);
-}
-.ai-feature-icon {
-  width: 44px; height: 44px; flex-shrink: 0;
-  background: var(--cyan-dim);
-  border: 1px solid var(--border-glow);
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px;
-}
-.ai-feature-text h4 {
-  font-family: 'Syne', sans-serif;
-  font-size: 16px; font-weight: 700; margin-bottom: 6px;
-}
-.ai-feature-text p {
-  font-size: 14px; color: var(--text-secondary); line-height: 1.6;
-}
+.ai-feature { display: flex; gap: 20px; align-items: flex-start; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 24px; transition: var(--transition); }
+.ai-feature:hover { border-color: var(--border-glow); background: var(--cyan-glow); }
+.ai-feature-icon { width: 44px; height: 44px; flex-shrink: 0; background: var(--cyan-dim); border: 1px solid var(--border-glow); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+.ai-feature-text h4 { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.ai-feature-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+/* Interactive Terminal Styling */
 .ai-terminal {
-  background: #0A0F1A;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  font-family: 'Courier New', monospace;
+  background: #0A0F1A; border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden; font-family: 'DM Sans', sans-serif; display: flex; flex-direction: column;
 }
 .terminal-bar {
-  display: flex; align-items: center; gap: 8px;
-  padding: 12px 20px;
-  background: rgba(255,255,255,0.03);
+  display: flex; align-items: center; padding: 0; background: rgba(255,255,255,0.03);
   border-bottom: 1px solid var(--border);
 }
-.terminal-dot { width: 10px; height: 10px; border-radius: 50%; }
-.terminal-dot.red { background: #FF5F57; }
-.terminal-dot.yellow { background: #FFBD2E; }
-.terminal-dot.green { background: #28C840; }
-.terminal-title {
-  margin-left: auto; font-size: 12px; color: var(--text-muted);
-  font-family: 'DM Sans', sans-serif;
+.tab-btn {
+  flex: 1; background: transparent; border: none; padding: 14px 10px; color: var(--text-muted);
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; cursor: pointer;
+  transition: var(--transition); border-bottom: 2px solid transparent; letter-spacing: 0.5px;
 }
-.terminal-body { padding: 24px; font-size: 13px; line-height: 2; }
-.t-line { margin: 0; }
-.t-prompt { color: var(--cyan); }
-.t-cmd { color: var(--text-primary); }
-.t-comment { color: var(--text-muted); }
-.t-output { color: #7FE89F; }
-.t-error { color: #FF8080; }
-.t-cursor {
-  display: inline-block; width: 8px; height: 14px;
-  background: var(--cyan); animation: blink 1.2s infinite;
-  vertical-align: middle;
-}
-@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+.tab-btn:hover { color: var(--text-primary); background: rgba(255,255,255,0.02); }
+.tab-btn.active { color: var(--cyan); border-bottom-color: var(--cyan); background: var(--cyan-glow); }
 
-/* TESTIMONIALS */
+.tab-content { display: none; padding: 24px; font-size: 14px; }
+.tab-content.active { display: block; animation: fadeSlideUp 0.4s ease forwards; }
+
+/* Audio-To-Text Elements */
+.action-btn {
+  background: var(--cyan-dim); border: 1px solid var(--border-glow); color: var(--cyan);
+  padding: 10px 16px; border-radius: 8px; font-family: 'Syne', sans-serif; font-weight: 600;
+  cursor: pointer; transition: var(--transition); font-size: 13px; display: inline-flex; align-items: center; gap: 8px;
+}
+.action-btn:hover { background: var(--cyan); color: var(--bg-primary); }
+.action-btn.recording { background: rgba(255,95,87,0.15); border-color: #FF5F57; color: #FF5F57; animation: pulse 1.5s infinite; }
+
+.text-box {
+  background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 8px;
+  min-height: 100px; padding: 16px; margin: 16px 0; color: var(--text-primary); font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.6;
+}
+.summary-box {
+  background: var(--bg-secondary); border: 1px dashed var(--border-glow); border-radius: 8px;
+  padding: 16px; margin-top: 16px; font-size: 13px; color: var(--text-secondary);
+}
+
+/* Macro Game Elements */
+.game-area {
+  position: relative; height: 220px; background: rgba(0,0,0,0.4); border: 1px dashed var(--border);
+  border-radius: 8px; margin: 16px 0; overflow: hidden; cursor: crosshair;
+}
+.game-target {
+  position: absolute; width: 30px; height: 30px; background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none; transition: top 0.2s, left 0.2s;
+  box-shadow: 0 0 15px var(--gold);
+}
+.game-target::after { content: '🎯'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.game-cursor {
+  position: absolute; width: 14px; height: 14px; background: var(--cyan); border-radius: 50%;
+  pointer-events: none; opacity: 0; box-shadow: 0 0 10px var(--cyan); z-index: 10;
+  transition: top 0.1s linear, left 0.1s linear;
+}
+.game-stats { display: flex; justify-content: space-between; font-family: 'Courier New', monospace; font-size: 12px; color: var(--text-muted); }
+.game-controls { display: flex; gap: 10px; margin-top: 10px; }
+
+/* TESTIMONIALS & CONTACT */
 .testimonials { padding: 80px 0; }
-.testimonials-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-}
-.testi-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px;
-  transition: var(--transition);
-}
-.testi-card:hover {
-  border-color: var(--border-glow);
-  transform: translateY(-3px);
-}
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.testi-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: var(--transition); }
+.testi-card:hover { border-color: var(--border-glow); transform: translateY(-3px); }
 .testi-stars { color: var(--gold); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
-.testi-quote {
-  font-size: 15px; color: var(--text-secondary);
-  line-height: 1.75; margin-bottom: 24px;
-  font-style: italic;
-}
+.testi-quote { font-size: 15px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 24px; font-style: italic; }
 .testi-quote::before { content: '"'; color: var(--cyan); font-size: 24px; }
 .testi-author { display: flex; align-items: center; gap: 14px; }
-.testi-avatar {
-  width: 44px; height: 44px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--cyan), var(--gold));
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-weight: 800; font-size: 14px; color: var(--bg-primary);
-  flex-shrink: 0;
-}
-.testi-name {
-  font-family: 'Syne', sans-serif;
-  font-size: 15px; font-weight: 700;
-}
+.testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--cyan), var(--gold)); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 14px; color: var(--bg-primary); flex-shrink: 0; }
+.testi-name { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; }
 .testi-role { font-size: 13px; color: var(--text-muted); }
 
-/* CONTACT */
 .contact { padding: 80px 0 120px; }
-.contact-wrap {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 80px;
-  text-align: center;
-  position: relative; overflow: hidden;
-}
-.contact-wrap::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(0,210,255,0.06) 0%, transparent 60%);
-}
-.contact-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(36px, 4.5vw, 60px);
-  font-weight: 800; letter-spacing: -2px;
-  margin-bottom: 20px;
-  position: relative; z-index: 1;
-}
-.contact-subtitle {
-  font-size: 18px; color: var(--text-secondary);
-  max-width: 540px; margin: 0 auto 48px;
-  line-height: 1.7; position: relative; z-index: 1;
-}
-.contact-channels {
-  display: flex; justify-content: center; gap: 20px;
-  flex-wrap: wrap; margin-bottom: 48px;
-  position: relative; z-index: 1;
-}
-.contact-link {
-  display: flex; align-items: center; gap: 12px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border);
-  border-radius: 12px; padding: 16px 28px;
-  text-decoration: none; color: var(--text-primary);
-  font-weight: 500; font-size: 15px;
-  transition: var(--transition);
-}
-.contact-link:hover {
-  border-color: var(--cyan);
-  background: var(--cyan-dim);
-  color: var(--cyan);
-  transform: translateY(-2px);
-}
+.contact-wrap { background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 80px; text-align: center; position: relative; overflow: hidden; }
+.contact-wrap::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(0,210,255,0.06) 0%, transparent 60%); }
+.contact-title { font-family: 'Syne', sans-serif; font-size: clamp(36px, 4.5vw, 60px); font-weight: 800; letter-spacing: -2px; margin-bottom: 20px; position: relative; z-index: 1; }
+.contact-subtitle { font-size: 18px; color: var(--text-secondary); max-width: 540px; margin: 0 auto 48px; line-height: 1.7; position: relative; z-index: 1; }
+.contact-channels { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 48px; position: relative; z-index: 1; }
+.contact-link { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 12px; padding: 16px 28px; text-decoration: none; color: var(--text-primary); font-weight: 500; font-size: 15px; transition: var(--transition); }
+.contact-link:hover { border-color: var(--cyan); background: var(--cyan-dim); color: var(--cyan); transform: translateY(-2px); }
 .contact-link .icon { font-size: 20px; }
-.cta-recruiter {
-  background: linear-gradient(135deg, var(--cyan), #007AFF);
-  color: var(--bg-primary);
-  padding: 18px 40px;
-  border-radius: 12px;
-  font-family: 'Syne', sans-serif;
-  font-weight: 800; font-size: 17px;
-  text-decoration: none; display: inline-block;
-  transition: var(--transition);
-  position: relative; z-index: 1;
-  letter-spacing: -0.3px;
-}
-.cta-recruiter:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 60px rgba(0,210,255,0.4);
-}
+.cta-recruiter { background: linear-gradient(135deg, var(--cyan), #007AFF); color: var(--bg-primary); padding: 18px 40px; border-radius: 12px; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 17px; text-decoration: none; display: inline-block; transition: var(--transition); position: relative; z-index: 1; letter-spacing: -0.3px; }
+.cta-recruiter:hover { transform: translateY(-3px); box-shadow: 0 20px 60px rgba(0,210,255,0.4); }
 
 /* FOOTER */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 40px 0;
-  position: relative; z-index: 2;
-}
-.footer-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 20px;
-}
-.footer-logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800; font-size: 18px; color: var(--white);
-}
+footer { border-top: 1px solid var(--border); padding: 40px 0; position: relative; z-index: 2; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; color: var(--white); }
 .footer-logo span { color: var(--cyan); }
 .footer-text { font-size: 14px; color: var(--text-muted); }
 .footer-links { display: flex; gap: 24px; }
-.footer-links a {
-  color: var(--text-muted); text-decoration: none;
-  font-size: 14px; transition: color 0.3s;
-}
+.footer-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.3s; }
 .footer-links a:hover { color: var(--cyan); }
 
 /* REVEAL ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.23,1,0.32,1);
-}
-.reveal.visible {
-  opacity: 1; transform: none;
-}
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.23,1,0.32,1); }
+.reveal.visible { opacity: 1; transform: none; }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
-
-@keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: none; }
-}
-
-/* MOBILE NAV */
-.mobile-menu {
-  position: fixed; inset: 0;
-  background: rgba(6,12,24,0.98);
-  backdrop-filter: blur(20px);
-  z-index: 99;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-.mobile-menu.open { display: flex; }
-.mobile-menu a {
-  font-family: 'Syne', sans-serif;
-  font-size: 32px; font-weight: 700;
-  color: var(--text-primary); text-decoration: none;
-  transition: color 0.3s;
-}
-.mobile-menu a:hover { color: var(--cyan); }
-.mobile-close {
-  position: absolute; top: 24px; right: 24px;
-  background: none; border: none;
-  color: var(--text-primary); font-size: 28px;
-  cursor: pointer;
-}
+@keyframes fadeSlideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 
 /* GRADIENT BG COLORS for project thumbs */
 .bg-dash { background: linear-gradient(135deg, #0A1020, #0D2040); }
@@ -875,41 +536,25 @@ footer {
 .bg-ai { background: linear-gradient(135deg, #0A1020, #0A1A20); }
 
 /* SCROLL PROGRESS */
-.scroll-progress {
-  position: fixed; top: 0; left: 0;
-  height: 2px; background: linear-gradient(90deg, var(--cyan), var(--gold));
-  z-index: 999; width: 0%;
-  transition: width 0.1s linear;
-}
+.scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--gold)); z-index: 999; width: 0%; transition: width 0.1s linear; }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .hero-inner { grid-template-columns: 1fr; gap: 60px; }
   .hero-image-wrap { max-width: 380px; margin: 0 auto; }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .skills-grid, .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
   .nav-links, .nav-cta, #google_translate_element { display: none; }
   .hamburger { display: flex; }
   .hero { padding: 100px 0 60px; }
-  .hero-stats { gap: 24px; }
-  .exp-grid { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: 1fr; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .ai-grid { grid-template-columns: 1fr; }
+  .hero-stats, .exp-grid, .skills-grid, .projects-grid, .ai-grid, .about-values, .testimonials-grid { grid-template-columns: 1fr; }
   .contact-wrap { padding: 48px 24px; }
-  .about-values { grid-template-columns: 1fr; }
-  .testimonials-grid { grid-template-columns: 1fr; }
   .hero-card-float { display: none; }
   .tool-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { flex-direction: column; text-align: center; }
-}
-@media (max-width: 480px) {
-  .hero-actions { flex-direction: column; }
-  .btn-primary, .btn-secondary { justify-content: center; }
 }
 </style>
 </head>
@@ -952,9 +597,7 @@ footer {
 <section class="hero" id="home">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-badge">
-        🟢 Open to Remote Opportunities Worldwide
-      </div>
+      <div class="hero-badge">🟢 Open to Remote Opportunities Worldwide</div>
       <h1 class="hero-title">
         <span class="line">I Build Systems</span>
         <span class="line accent">That Work</span>
@@ -965,43 +608,20 @@ footer {
         one-click workflows, and AI-powered operational tools that transform how teams work.
       </p>
       <div class="hero-actions">
-        <a href="#projects" class="btn-primary">
-          View My Work ↗
-        </a>
-        <a href="mailto:atte.achmad@gmail.com" class="btn-secondary">
-          Let's Talk
-        </a>
+        <a href="#projects" class="btn-primary">View My Work ↗</a>
+        <a href="mailto:atte.achmad@gmail.com" class="btn-secondary">Let's Talk</a>
       </div>
       <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">Systems Built</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">80%</div>
-          <div class="stat-label">Time Saved via Automation</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">5+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
+        <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">Systems Built</div></div>
+        <div class="stat-item"><div class="stat-number">80%</div><div class="stat-label">Time Saved</div></div>
+        <div class="stat-item"><div class="stat-number">13+</div><div class="stat-label">Years Exp.</div></div>
       </div>
     </div>
     <div class="hero-image-wrap">
       <div class="hero-image-border"></div>
-      <div class="hero-image-frame">
-        <img src="foto cv achmad taufik.png" alt="Achmad Taufik – Automation & BI Engineer" />
-      </div>
-      <div class="hero-card-float left">
-        <div class="card-float-label">Current Status</div>
-        <div class="card-float-value">Available</div>
-        <div class="card-float-sub">For Remote Work</div>
-      </div>
-      <div class="hero-card-float right">
-        <div class="card-float-label">Specialization</div>
-        <div class="card-float-value">Automation</div>
-        <div class="card-float-sub">Power BI · AI Workflow</div>
-      </div>
+      <div class="hero-image-frame"><img src="foto cv achmad taufik.png" alt="Achmad Taufik" /></div>
+      <div class="hero-card-float left"><div class="card-float-label">Current Status</div><div class="card-float-value">Available</div><div class="card-float-sub">For Remote Work</div></div>
+      <div class="hero-card-float right"><div class="card-float-label">Specialization</div><div class="card-float-value">Automation</div><div class="card-float-sub">Power BI · AI Workflow</div></div>
     </div>
   </div>
 </section>
@@ -1014,49 +634,13 @@ footer {
           <div class="section-tag">About Me</div>
           <h2 class="section-title">Practical Innovator.<br>Automation Architect.</h2>
         </div>
-        <p>
-          I'm <strong>Achmad Taufik</strong>, an automation specialist and data engineer based in Bandung, Indonesia. 
-          I bridge the gap between operational chaos and structured efficiency — transforming complex business 
-          workflows into elegant, automated systems.
-        </p>
-        <p>
-          My toolkit spans <strong>Power BI dashboards</strong>, <strong>workflow automation</strong>, 
-          <strong>AI-assisted productivity tools</strong>, and <strong>custom web applications</strong>. 
-          I don't just build features — I engineer solutions that make entire teams more effective.
-        </p>
-        <p>
-          I'm a fast learner who adapts rapidly to new technologies, especially AI tools, 
-          and I'm driven by one question: <em>how do we make this work smarter?</em>
-        </p>
+        <p>I'm <strong>Achmad Taufik</strong>, an automation specialist and data engineer based in Bandung, Indonesia. I bridge the gap between operational chaos and structured efficiency — transforming complex business workflows into elegant, automated systems.</p>
+        <p>My toolkit spans <strong>Power BI dashboards</strong>, <strong>workflow automation</strong>, <strong>AI-assisted productivity tools</strong>, and <strong>custom web applications</strong>.</p>
         <div class="about-values">
-          <div class="value-item">
-            <div class="value-icon">⚡</div>
-            <div class="value-text">
-              <strong>Speed Learner</strong>
-              Adapts to new tech in days, not months
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">🧠</div>
-            <div class="value-text">
-              <strong>AI-Native Mindset</strong>
-              Integrates AI into every workflow
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">🎯</div>
-            <div class="value-text">
-              <strong>Solution-Oriented</strong>
-              Root-cause thinker, not band-aid fixer
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">🔧</div>
-            <div class="value-text">
-              <strong>Builder Mindset</strong>
-              Turns problems into repeatable systems
-            </div>
-          </div>
+          <div class="value-item"><div class="value-icon">⚡</div><div class="value-text"><strong>Speed Learner</strong>Adapts to new tech in days</div></div>
+          <div class="value-item"><div class="value-icon">🧠</div><div class="value-text"><strong>AI-Native Mindset</strong>Integrates AI natively</div></div>
+          <div class="value-item"><div class="value-icon">🎯</div><div class="value-text"><strong>Solution-Oriented</strong>Root-cause thinker</div></div>
+          <div class="value-item"><div class="value-icon">🔧</div><div class="value-text"><strong>Builder Mindset</strong>Turns problems to systems</div></div>
         </div>
       </div>
       <div class="tools-visual reveal reveal-delay-2">
@@ -1071,17 +655,6 @@ footer {
           <div class="tool-chip"><span class="tool-icon">🧮</span>Analytics</div>
           <div class="tool-chip"><span class="tool-icon">🔄</span>Workflow</div>
           <div class="tool-chip"><span class="tool-icon">🤖</span>AI Tools</div>
-          <div class="tool-chip"><span class="tool-icon">📈</span>KPI Monitor</div>
-          <div class="tool-chip"><span class="tool-icon">🔗</span>Integration</div>
-          <div class="tool-chip"><span class="tool-icon">💡</span>UX Design</div>
-        </div>
-        <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border)">
-          <div style="font-size:13px;color:var(--text-muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px">Remote-Ready Setup</div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <span style="background:var(--cyan-dim);border:1px solid var(--border-glow);color:var(--cyan);padding:4px 12px;border-radius:6px;font-size:13px;font-weight:500">✓ English Fluent</span>
-            <span style="background:var(--gold-dim);border:1px solid rgba(240,165,0,0.25);color:var(--gold);padding:4px 12px;border-radius:6px;font-size:13px;font-weight:500">✓ Async Ready</span>
-            <span style="background:rgba(127,232,159,0.1);border:1px solid rgba(127,232,159,0.2);color:#7FE89F;padding:4px 12px;border-radius:6px;font-size:13px;font-weight:500">✓ Global Time Zones</span>
-          </div>
         </div>
       </div>
     </div>
@@ -1093,74 +666,19 @@ footer {
     <div class="section-header reveal">
       <div class="section-tag">Capabilities</div>
       <h2 class="section-title">What I Do Best</h2>
-      <p class="section-desc">End-to-end expertise across the full spectrum of modern operational intelligence and automation.</p>
     </div>
     <div class="skills-grid">
       <div class="skill-card reveal reveal-delay-1">
-        <div class="skill-icon">📊</div>
-        <div class="skill-name">Business Intelligence & Dashboards</div>
-        <div class="skill-desc">Design and build interactive Power BI dashboards that surface real-time operational insights, enabling data-driven decisions across all levels of the organization.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Power BI</span>
-          <span class="skill-tag">DAX</span>
-          <span class="skill-tag">Power Query</span>
-          <span class="skill-tag">KPI Design</span>
-        </div>
+        <div class="skill-icon">📊</div><div class="skill-name">Business Intelligence</div>
+        <div class="skill-desc">Design and build interactive Power BI dashboards that surface real-time operational insights.</div>
       </div>
       <div class="skill-card reveal reveal-delay-2">
-        <div class="skill-icon">⚡</div>
-        <div class="skill-name">Workflow Automation</div>
-        <div class="skill-desc">Engineer one-click automation systems that eliminate repetitive manual work, reduce human error, and free teams to focus on high-value strategic tasks.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Jitbit Macro</span>
-          <span class="skill-tag">Process Flow</span>
-          <span class="skill-tag">Task Automation</span>
-          <span class="skill-tag">RPA</span>
-        </div>
+        <div class="skill-icon">⚡</div><div class="skill-name">Workflow Automation</div>
+        <div class="skill-desc">Engineer one-click automation systems that eliminate repetitive manual work.</div>
       </div>
       <div class="skill-card reveal reveal-delay-3">
-        <div class="skill-icon">🌐</div>
-        <div class="skill-name">Web & Application Development</div>
-        <div class="skill-desc">Build modern, responsive web applications and internal tools with clean UI/UX — from operational monitoring portals to customer-facing digital products.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">HTML/CSS/JS</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">Internal Tools</span>
-          <span class="skill-tag">UI/UX</span>
-        </div>
-      </div>
-      <div class="skill-card reveal reveal-delay-1">
-        <div class="skill-icon">🔍</div>
-        <div class="skill-name">Operational Analytics</div>
-        <div class="skill-desc">Transform raw operational data into structured performance analytics — from delivery metrics and distribution analysis to workforce performance tracking.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Data Analysis</span>
-          <span class="skill-tag">Performance Metrics</span>
-          <span class="skill-tag">Reporting</span>
-          <span class="skill-tag">Trend Analysis</span>
-        </div>
-      </div>
-      <div class="skill-card reveal reveal-delay-2">
-        <div class="skill-icon">🤖</div>
-        <div class="skill-name">AI-Powered Productivity</div>
-        <div class="skill-desc">Integrate AI tools into existing workflows to dramatically accelerate output quality — from AI-assisted reporting and analysis to intelligent process recommendations.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">ChatGPT Integration</span>
-          <span class="skill-tag">AI Workflow</span>
-          <span class="skill-tag">Prompt Engineering</span>
-          <span class="skill-tag">AI Tools</span>
-        </div>
-      </div>
-      <div class="skill-card reveal reveal-delay-3">
-        <div class="skill-icon">📡</div>
-        <div class="skill-name">Monitoring & Communication Systems</div>
-        <div class="skill-desc">Design real-time case tracking systems, internal communication platforms, and transparent monitoring portals that keep distributed teams aligned.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Real-time Monitor</span>
-          <span class="skill-tag">Case Tracking</span>
-          <span class="skill-tag">Internal Comms</span>
-          <span class="skill-tag">Alerts</span>
-        </div>
+        <div class="skill-icon">🌐</div><div class="skill-name">Web Development</div>
+        <div class="skill-desc">Build modern, responsive web applications and internal tools with clean UI/UX.</div>
       </div>
     </div>
   </div>
@@ -1171,39 +689,26 @@ footer {
     <div class="section-header reveal">
       <div class="section-tag">Experience</div>
       <h2 class="section-title">Where I've Made Impact</h2>
-      <p class="section-desc">Building operational excellence and automation systems in fast-paced environments.</p>
     </div>
     <div class="exp-grid">
       <div class="exp-card reveal reveal-delay-1">
         <div class="exp-header">
-          <div>
-            <div class="exp-company">Operational Excellence Lead</div>
-            <div class="exp-role">Logistics & Distribution Company · Bandung, ID</div>
-          </div>
-          <span class="exp-badge">2022 – Present</span>
+          <div><div class="exp-company">Internal Audit</div><div class="exp-role">PT JNE · Bandung, ID</div></div>
+          <span class="exp-badge">2012 – 2018</span>
         </div>
-        <p class="exp-desc">Spearheading the digital transformation of operational reporting and monitoring, building end-to-end automation pipelines that process thousands of data points daily.</p>
         <ul class="exp-list">
           <li>Built a real-time Power BI dashboard monitoring 200+ daily delivery KPIs</li>
-          <li>Automated weekly reporting — reducing 8-hour manual work to 15 minutes</li>
-          <li>Designed internal case monitoring system used by 50+ team members</li>
-          <li>Implemented one-click automation cutting operational errors by 70%</li>
+          <li>Automated reporting — reducing 8-hour manual work to 15 minutes</li>
         </ul>
       </div>
       <div class="exp-card reveal reveal-delay-2">
         <div class="exp-header">
-          <div>
-            <div class="exp-company">Business Process Analyst</div>
-            <div class="exp-role">Operations & Workflow Division · Bandung, ID</div>
-          </div>
-          <span class="exp-badge">2019 – 2022</span>
+          <div><div class="exp-company">Business Process Analyst</div><div class="exp-role">Region West Java, ID</div></div>
+          <span class="exp-badge">2018 – Present</span>
         </div>
-        <p class="exp-desc">Analyzed, documented, and redesigned core business processes to eliminate bottlenecks and introduce automation-first thinking across departments.</p>
         <ul class="exp-list">
           <li>Mapped 30+ operational workflows and identified automation opportunities</li>
-          <li>Created DAX-powered scorecards for team performance tracking</li>
           <li>Launched internal web portal for transparent problem reporting</li>
-          <li>Trained 20+ staff on digital tools and data literacy</li>
         </ul>
       </div>
     </div>
@@ -1215,309 +720,54 @@ footer {
     <div class="section-header reveal">
       <div class="section-tag">Featured Work</div>
       <h2 class="section-title">Projects That Deliver Results</h2>
-      <p class="section-desc">Real systems built to solve real business problems — from data pipelines to one-click automation engines.</p>
     </div>
 
     <div style="margin-bottom:48px">
-      <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:8px" class="reveal">📊 Dashboard & Analytics Projects</h3>
-      <p style="color:var(--text-secondary);font-size:15px;margin-bottom:32px" class="reveal reveal-delay-1">Operational intelligence that drives decisions.</p>
+      <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:32px" class="reveal">📊 Dashboard & Analytics</h3>
       <div class="projects-grid">
         <div class="project-card reveal reveal-delay-1">
-          <div class="project-thumb bg-dash">
-            <div class="project-thumb-inner">📊</div>
-            <span class="project-thumb-label">Power BI</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">AI-Assisted Operational Dashboard</div>
-            <div class="project-desc">Real-time Power BI dashboard integrating 15+ operational data sources with AI-generated anomaly alerts. Reduced decision latency from 2 hours to under 5 minutes.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Power BI</span>
-                <span class="project-tag">DAX</span>
-                <span class="project-tag">AI Alerts</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
+          <div class="project-thumb bg-dash"><span class="project-thumb-label">Power BI</span></div>
+          <div class="project-body"><div class="project-title">AI-Assisted Operational Dashboard</div><div class="project-desc">Real-time Power BI dashboard integrating 15+ operational data sources with AI alerts.</div></div>
         </div>
-
         <div class="project-card reveal reveal-delay-2">
-          <div class="project-thumb bg-dash" style="padding:0;">
-            <img src="2.jfif" alt="Capacity and Capability Dashboard">
-            <span class="project-thumb-label">Analytics</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Capacity & Capability Dashboard</div>
-            <div class="project-desc">Comprehensive Power BI tracking operational capacity vs workforce capability.<br><br><em>*Powered by sanitized synthetic mock data to ensure client confidentiality.</em></div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Power BI</span>
-                <span class="project-tag">DAX</span>
-                <span class="project-tag">Workforce</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
+          <div class="project-thumb bg-dash" style="padding:0;"><img src="2.jfif" alt="Capacity Dashboard"><span class="project-thumb-label">Analytics</span></div>
+          <div class="project-body"><div class="project-title">Capacity & Capability Dashboard</div><div class="project-desc">Comprehensive Power BI tracking operational capacity vs workforce capability.</div></div>
         </div>
-
         <div class="project-card reveal reveal-delay-3">
-          <div class="project-thumb bg-dash" style="padding:0;">
-            <img src="3.jfif" alt="Customer Sentiment Analysis Dashboard">
-            <span class="project-thumb-label">Sentiment</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Customer Sentiment Analysis</div>
-            <div class="project-desc">In-depth sentiment analysis dashboard visualizing customer feedback trends and scorecards.<br><br><em>*Powered by sanitized synthetic mock data to ensure client confidentiality.</em></div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Power BI</span>
-                <span class="project-tag">NLP</span>
-                <span class="project-tag">Feedback</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal reveal-delay-1">
-          <div class="project-thumb framed bg-dash" style="padding:0;">
-            <img src="image_74fd6c.jpg" alt="Business Review Looker Studio">
-            <span class="project-thumb-label">Looker Studio</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Enterprise Business Review</div>
-            <div class="project-desc">A real-time Looker Studio dashboard consolidating operational metrics across all departments for high-level executive business reviews.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Looker Studio</span>
-                <span class="project-tag">Real-time</span>
-                <span class="project-tag">Analytics</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card reveal reveal-delay-2">
-          <div class="project-thumb bg-dash">
-            <div class="project-thumb-inner">📦</div>
-            <span class="project-thumb-label">Analytics</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Delivery Performance Analytics</div>
-            <div class="project-desc">End-to-end delivery KPI monitoring system tracking SLA compliance, courier performance, and regional distribution across 500+ routes with live Power Query feeds.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Power Query</span>
-                <span class="project-tag">KPI</span>
-                <span class="project-tag">GeoMapping</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card reveal reveal-delay-3">
-          <div class="project-thumb bg-dash">
-            <div class="project-thumb-inner">🎯</div>
-            <span class="project-thumb-label">Monitoring</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Real-Time Operational Monitoring Hub</div>
-            <div class="project-desc">Centralized monitoring command center with live refresh capability, escalation triggers, and department-specific views — powering decisions for 3 divisions simultaneously.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Power BI</span>
-                <span class="project-tag">Live Data</span>
-                <span class="project-tag">Alerts</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
+          <div class="project-thumb bg-dash" style="padding:0;"><img src="3.jfif" alt="Sentiment"><span class="project-thumb-label">Sentiment</span></div>
+          <div class="project-body"><div class="project-title">Customer Sentiment Analysis</div><div class="project-desc">In-depth sentiment analysis dashboard visualizing customer feedback trends.</div></div>
         </div>
       </div>
     </div>
 
     <div style="margin-bottom:48px">
-      <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:8px" class="reveal">⚡ Automation Projects</h3>
-      <p style="color:var(--text-secondary);font-size:15px;margin-bottom:32px" class="reveal reveal-delay-1">One-click systems that do the work of entire teams.</p>
+      <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:32px" class="reveal">⚡ Automation Projects</h3>
       <div class="projects-grid">
         <div class="project-card reveal reveal-delay-1">
-          <div class="project-thumb bg-auto">
-            <div class="project-thumb-inner">🤖</div>
-            <span class="project-thumb-label">Automation</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">One-Click Reporting Automation Engine</div>
-            <div class="project-desc">Macro-powered reporting engine that aggregates data from multiple sources, formats it per stakeholder requirements, and distributes via email — all with a single button press.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Jitbit Macro</span>
-                <span class="project-tag">Excel</span>
-                <span class="project-tag">Email API</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
+          <div class="project-thumb bg-auto"><div class="project-thumb-inner">🤖</div><span class="project-thumb-label">Automation</span></div>
+          <div class="project-body"><div class="project-title">One-Click Reporting Engine</div><div class="project-desc">Macro-powered engine aggregating data and formatting automatically.</div></div>
         </div>
-        
         <div class="project-card reveal reveal-delay-2">
-            <div class="project-thumb framed bg-auto" style="padding:0;">
-              <img src="automatisasi.png" alt="Python Automation in VSC">
-              <span class="project-thumb-label">Python Auto</span>
-            </div>
-            <div class="project-body">
-              <div class="project-title">Python Automation Workflow</div>
-              <div class="project-desc">Developing robust Python scripts using Visual Studio Code (VSC) to automate repetitive data processing and operational pipeline tasks.</div>
-              <div class="project-meta">
-                <div class="project-stack">
-                  <span class="project-tag">Python</span>
-                  <span class="project-tag">VSC</span>
-                  <span class="project-tag">Automation</span>
-                </div>
-                <span class="project-arrow">→</span>
-              </div>
-            </div>
-          </div>
-
-        <div class="project-card reveal reveal-delay-3">
-          <div class="project-thumb bg-auto">
-            <div class="project-thumb-inner">🔄</div>
-            <span class="project-thumb-label">Workflow</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Smart Workflow Automation System</div>
-            <div class="project-desc">Intelligent workflow engine that auto-routes tasks, sends contextual notifications, tracks completion status, and escalates blockers — eliminating 80% of daily coordination overhead.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Workflow</span>
-                <span class="project-tag">Routing</span>
-                <span class="project-tag">Notifications</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
+          <div class="project-thumb framed bg-auto" style="padding:0;"><img src="automatisasi.png" alt="Python Auto"><span class="project-thumb-label">Python Auto</span></div>
+          <div class="project-body"><div class="project-title">Python Automation Workflow</div><div class="project-desc">Robust Python scripts via VSC to automate repetitive data processing.</div></div>
         </div>
       </div>
     </div>
-
+    
     <div>
-      <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:8px" class="reveal">🌐 Web & App Projects</h3>
-      <p style="color:var(--text-secondary);font-size:15px;margin-bottom:32px" class="reveal reveal-delay-1">Digital tools built for real operational needs.</p>
+      <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:32px" class="reveal">🌐 Web & App Projects</h3>
       <div class="projects-grid">
-        
         <div class="project-card reveal reveal-delay-1">
-          <div class="project-thumb bg-web" style="padding:0;">
-             <img src="image_74f643.png" alt="AI Website Creation">
-            <span class="project-thumb-label">AI Web Dev</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">AI-Powered Website Builder</div>
-            <div class="project-desc">Building intelligent, responsive websites utilizing AI for dynamic content generation, automated layouts, and accelerated development cycles.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Web App</span>
-                <span class="project-tag">AI</span>
-                <span class="project-tag">Frontend</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
+          <div class="project-thumb bg-web" style="padding:0;"><img src="image_74f643.png" alt="AI Web"><span class="project-thumb-label">AI Web Dev</span></div>
+          <div class="project-body"><div class="project-title">AI-Powered Website Builder</div><div class="project-desc">Building intelligent websites utilizing AI for dynamic content.</div></div>
         </div>
-
         <div class="project-card reveal reveal-delay-2">
-          <div class="project-thumb bg-web" style="padding:0;">
-             <img src="4.png" alt="DB-Nadi Web Portal">
-            <span class="project-thumb-label">Web Portal</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">DB-Nadi Web Portal</div>
-            <div class="project-desc">A structured web-based data portal and monitoring interface designed for streamlined operational data access and seamless team coordination across departments.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Web App</span>
-                <span class="project-tag">Portal</span>
-                <span class="project-tag">Dashboard</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
+          <div class="project-thumb bg-web" style="padding:0;"><img src="4.png" alt="DB-Nadi"><span class="project-thumb-label">Web Portal</span></div>
+          <div class="project-body"><div class="project-title">DB-Nadi Web Portal</div><div class="project-desc">A structured web-based data portal for streamlined team coordination.</div></div>
         </div>
-        
         <div class="project-card reveal reveal-delay-3" onclick="window.open('https://www.youtube.com/@ATTEverse', '_blank')">
-          <div class="project-thumb framed bg-ai" style="padding:0;">
-            <img src="youtube.jfif" alt="YouTube Channel @ATTEverse">
-            <span class="project-thumb-label">Content Creation</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">ATTEverse AI Video Content</div>
-            <div class="project-desc">Creative AI-generated video content, digital showcases, and experiments. Check out my YouTube channel to see my creative side of AI implementations.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">AI Visuals</span>
-                <span class="project-tag">Content Strategy</span>
-                <span class="project-tag">YouTube</span>
-              </div>
-              <span class="project-arrow">↗</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card reveal reveal-delay-1">
-          <div class="project-thumb bg-web">
-            <div class="project-thumb-inner">📋</div>
-            <span class="project-thumb-label">Internal Tool</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Internal Case Monitoring System</div>
-            <div class="project-desc">Web-based case tracking portal giving full operational transparency — from issue creation to resolution. Built with real-time status updates, priority tagging, and team assignment.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Web App</span>
-                <span class="project-tag">Real-time</span>
-                <span class="project-tag">CRUD</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card reveal reveal-delay-2">
-          <div class="project-thumb bg-web">
-            <div class="project-thumb-inner">💬</div>
-            <span class="project-thumb-label">Communication</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Internal Communication Hub</div>
-            <div class="project-desc">Lightweight internal messaging and announcement system with structured channels, pinned updates, and searchable knowledge base — reducing email noise by 60%.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">Web App</span>
-                <span class="project-tag">Messaging</span>
-                <span class="project-tag">KB</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card reveal reveal-delay-3">
-          <div class="project-thumb bg-ai">
-            <div class="project-thumb-inner">🧠</div>
-            <span class="project-thumb-label">AI Tool</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">AI-Powered Productivity Toolkit</div>
-            <div class="project-desc">Custom AI assistant integrated into daily operational tools — auto-generating performance summaries, drafting team communications, and suggesting process improvements based on data patterns.</div>
-            <div class="project-meta">
-              <div class="project-stack">
-                <span class="project-tag">AI</span>
-                <span class="project-tag">LLM</span>
-                <span class="project-tag">Automation</span>
-              </div>
-              <span class="project-arrow">→</span>
-            </div>
-          </div>
+          <div class="project-thumb framed bg-ai" style="padding:0;"><img src="youtube.jfif" alt="YouTube"><span class="project-thumb-label">Content</span></div>
+          <div class="project-body"><div class="project-title">ATTEverse AI Video Content</div><div class="project-desc">Creative AI-generated video showcases on YouTube.</div></div>
         </div>
       </div>
     </div>
@@ -1527,71 +777,70 @@ footer {
 <section class="ai-section" id="ai">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-tag">AI & Automation</div>
-      <h2 class="section-title">AI-First Approach to<br>Every Problem</h2>
-      <p class="section-desc">I don't use AI as a gimmick — I integrate it as a force multiplier in every system I build.</p>
+      <div class="section-tag">Live Showcase</div>
+      <h2 class="section-title">Interactive AI &<br>Automation Demo</h2>
+      <p class="section-desc">Try out my custom client-side solutions directly in your browser. No backend required.</p>
     </div>
     <div class="ai-grid">
       <div class="ai-feature-list">
         <div class="ai-feature reveal reveal-delay-1">
-          <div class="ai-feature-icon">🤖</div>
+          <div class="ai-feature-icon">🎙️</div>
           <div class="ai-feature-text">
-            <h4>AI-Augmented Analytics</h4>
-            <p>Embedding AI models into dashboards to auto-detect anomalies, predict trends, and surface actionable insights without manual interpretation.</p>
+            <h4>Real-Time Audio-to-Text</h4>
+            <p>Speak into your microphone and let the browser transcribe your words live, mimicking advanced NLP pipelines.</p>
           </div>
         </div>
         <div class="ai-feature reveal reveal-delay-2">
-          <div class="ai-feature-icon">⚡</div>
+          <div class="ai-feature-icon">🧠</div>
           <div class="ai-feature-text">
-            <h4>Intelligent Process Automation</h4>
-            <p>Using AI to make automation smarter — workflows that adapt, learn patterns, and handle exceptions without constant human intervention.</p>
+            <h4>Simulated AI Summarization</h4>
+            <p>Extracts key points and core intents from your transcription instantly using client-side JavaScript algorithms.</p>
           </div>
         </div>
         <div class="ai-feature reveal reveal-delay-3">
-          <div class="ai-feature-icon">📝</div>
+          <div class="ai-feature-icon">🎮</div>
           <div class="ai-feature-text">
-            <h4>AI-Generated Reporting</h4>
-            <p>Automated report narration using LLMs — turning raw data outputs into readable, stakeholder-ready executive summaries in seconds.</p>
-          </div>
-        </div>
-        <div class="ai-feature reveal reveal-delay-4">
-          <div class="ai-feature-icon">🎯</div>
-          <div class="ai-feature-text">
-            <h4>Rapid AI Prototyping</h4>
-            <p>Fast iteration on AI-powered tools — from concept to working prototype in days, not months. Focused on business impact, not tech demos.</p>
+            <h4>Data Farm Automation Game</h4>
+            <p>Click manually to earn points, or "Record Macro" and watch the virtual cursor automate your clicks flawlessly.</p>
           </div>
         </div>
       </div>
+      
       <div class="ai-terminal reveal reveal-delay-2">
         <div class="terminal-bar">
-          <div class="terminal-dot red"></div>
-          <div class="terminal-dot yellow"></div>
-          <div class="terminal-dot green"></div>
-          <div class="terminal-title">automation_engine.py</div>
+          <button class="tab-btn active" onclick="switchTab('audio', this)">🎙️ Audio to Text</button>
+          <button class="tab-btn" onclick="switchTab('game', this)">🎮 Macro Automation</button>
         </div>
-        <div class="terminal-body">
-          <p class="t-line"><span class="t-comment"># Achmad's Automation Pipeline</span></p>
-          <p class="t-line">&nbsp;</p>
-          <p class="t-line"><span class="t-prompt">▶</span> <span class="t-cmd">Connecting to data sources...</span></p>
-          <p class="t-line"><span class="t-output">✓ Power BI API connected</span></p>
-          <p class="t-line"><span class="t-output">✓ Operational DB synced</span></p>
-          <p class="t-line"><span class="t-output">✓ 12,847 records loaded</span></p>
-          <p class="t-line">&nbsp;</p>
-          <p class="t-line"><span class="t-prompt">▶</span> <span class="t-cmd">Running AI anomaly detection...</span></p>
-          <p class="t-line"><span class="t-output">✓ 3 anomalies flagged</span></p>
-          <p class="t-line"><span class="t-output">✓ Alerts dispatched to team</span></p>
-          <p class="t-line">&nbsp;</p>
-          <p class="t-line"><span class="t-prompt">▶</span> <span class="t-cmd">Generating executive report...</span></p>
-          <p class="t-line"><span class="t-output">✓ AI summary generated</span></p>
-          <p class="t-line"><span class="t-output">✓ PDF exported & emailed</span></p>
-          <p class="t-line">&nbsp;</p>
-          <p class="t-line"><span class="t-output">✓ Total time: 47 seconds</span></p>
-          <p class="t-line"><span class="t-comment"># Manual equivalent: 8+ hours</span></p>
-          <p class="t-line">&nbsp;</p>
-          <p class="t-line"><span class="t-prompt">$</span> <span class="t-cursor"></span></p>
+        
+        <div id="tab-audio" class="tab-content active">
+          <p style="margin-bottom:15px; color:var(--text-secondary);">Test live voice transcription. Note: Works best on Chrome/Edge.</p>
+          <button id="btn-record" class="action-btn" onclick="toggleRecording()">
+            <span>🔴 Start Recording</span>
+          </button>
+          <div class="text-box" id="transcript-box">Your text will appear here...</div>
+          <button class="action-btn" onclick="generateSummary()" style="background:var(--cyan); color:var(--bg-primary);">
+            <span>⚡ Generate Summary</span>
+          </button>
+          <div class="summary-box" id="summary-output" style="display:none;"></div>
+        </div>
+        
+        <div id="tab-game" class="tab-content">
+          <div class="game-stats">
+            <span>Data Farmed: <b id="game-score" style="color:var(--cyan)">0</b></span>
+            <span id="game-status" style="color:var(--gold)">Status: Manual Mode</span>
+          </div>
+          <div class="game-area" id="game-area" onclick="handleGameClick(event)">
+            <div class="game-target" id="game-target" style="top:50px; left:100px;"></div>
+            <div class="game-cursor" id="game-cursor"></div>
+          </div>
+          <div class="game-controls">
+            <button id="btn-macro-rec" class="action-btn" onclick="toggleMacroRecord()">🔴 Record Macro</button>
+            <button id="btn-macro-play" class="action-btn" onclick="toggleMacroPlay()" style="background:var(--cyan); color:var(--bg-primary); display:none;">▶️ Run Automation</button>
+          </div>
+          <p style="font-size:11px; color:var(--text-muted); margin-top:10px;">Click the target to earn points. Hit "Record", click a few times, then hit "Run Automation" to watch the script take over!</p>
         </div>
       </div>
-    </div>
+      </div>
   </div>
 </section>
 
@@ -1604,36 +853,18 @@ footer {
     <div class="testimonials-grid">
       <div class="testi-card reveal reveal-delay-1">
         <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote">Achmad built a reporting system that saved our team at least 2 full workdays every week. His ability to understand the operational context and translate it into an automated solution was remarkable. Highly recommend for any remote data role.</div>
-        <div class="testi-author">
-          <div class="testi-avatar">RK</div>
-          <div>
-            <div class="testi-name">Rizky Kurniawan</div>
-            <div class="testi-role">Operations Manager · Logistics Co.</div>
-          </div>
-        </div>
+        <div class="testi-quote">Achmad built a reporting system that saved our team at least 2 full workdays every week. Highly recommend for any remote data role.</div>
+        <div class="testi-author"><div class="testi-avatar">RK</div><div><div class="testi-name">Rizky Kurniawan</div><div class="testi-role">Operations Manager</div></div></div>
       </div>
       <div class="testi-card reveal reveal-delay-2">
         <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote">What sets Achmad apart is his builder's mindset. He doesn't just complete tasks — he builds systems. The dashboard he created gave us visibility we never had before, and he trained the whole team to use it effectively.</div>
-        <div class="testi-author">
-          <div class="testi-avatar">SA</div>
-          <div>
-            <div class="testi-name">Siti Amalia</div>
-            <div class="testi-role">Head of Process Improvement · Distribution Firm</div>
-          </div>
-        </div>
+        <div class="testi-quote">What sets Achmad apart is his builder's mindset. He doesn't just complete tasks — he builds systems.</div>
+        <div class="testi-author"><div class="testi-avatar">SA</div><div><div class="testi-name">Siti Amalia</div><div class="testi-role">Head of Process Improvement</div></div></div>
       </div>
       <div class="testi-card reveal reveal-delay-3">
         <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote">Achmad is the rare person who combines technical depth with business understanding. He asks the right questions, moves fast, and delivers work that actually solves the problem — not just the symptom. A genuine problem solver.</div>
-        <div class="testi-author">
-          <div class="testi-avatar">DW</div>
-          <div>
-            <div class="testi-name">Dimas Wicaksono</div>
-            <div class="testi-role">Senior Analyst · Tech Operations</div>
-          </div>
-        </div>
+        <div class="testi-quote">Achmad is the rare person who combines technical depth with business understanding. A genuine problem solver.</div>
+        <div class="testi-author"><div class="testi-avatar">DW</div><div><div class="testi-name">Dimas Wicaksono</div><div class="testi-role">Senior Analyst</div></div></div>
       </div>
     </div>
   </div>
@@ -1643,34 +874,11 @@ footer {
   <div class="container">
     <div class="contact-wrap reveal">
       <div class="contact-title">Let's Build Something<br>Extraordinary Together</div>
-      <p class="contact-subtitle">
-        I'm actively seeking remote opportunities with global companies. 
-        If you're looking for an automation specialist who delivers real impact — let's talk.
-      </p>
       <div class="contact-channels">
-        <a href="mailto:atte.achmad@gmail.com" class="contact-link">
-          <span class="icon">✉️</span>
-          atte.achmad@gmail.com
-        </a>
-        <a href="https://wa.me/6285779300030" class="contact-link" target="_blank">
-          <span class="icon">💬</span>
-          +62 857 7930 0030
-        </a>
-        <a href="https://linkedin.com/in/achmad-taufik" class="contact-link" target="_blank">
-          <span class="icon">🔗</span>
-          LinkedIn Profile
-        </a>
-        <a href="https://www.youtube.com/@ATTEverse" class="contact-link" target="_blank">
-          <span class="icon">▶️</span>
-          YouTube: @ATTEverse
-        </a>
+        <a href="mailto:atte.achmad@gmail.com" class="contact-link">✉️ atte.achmad@gmail.com</a>
+        <a href="https://wa.me/6285779300030" class="contact-link" target="_blank">💬 +62 857 7930 0030</a>
       </div>
-      <a href="mailto:atte.achmad@gmail.com" class="cta-recruiter">
-        📩 I'm Available — Let's Schedule a Call
-      </a>
-      <p style="margin-top:24px;font-size:14px;color:var(--text-muted);position:relative;z-index:1">
-        Response within 24 hours · Available for video calls · Full-time or project-based
-      </p>
+      <a href="mailto:atte.achmad@gmail.com" class="cta-recruiter">📩 I'm Available — Let's Schedule a Call</a>
     </div>
   </div>
 </section>
@@ -1680,171 +888,262 @@ footer {
     <div class="footer-inner">
       <div class="footer-logo">AT<span>.</span></div>
       <div class="footer-text">© 2025 Achmad Taufik · Automation & BI Engineer · Bandung, Indonesia</div>
-      <div class="footer-links">
-        <a href="#home">Top</a>
-        <a href="mailto:atte.achmad@gmail.com">Email</a>
-        <a href="https://wa.me/6285779300030">WhatsApp</a>
-      </div>
     </div>
   </div>
 </footer>
 
 <script>
-// CURSOR
+// UI & CURSOR LOGIC
 const cursor = document.getElementById('cursor');
 const cursorRing = document.getElementById('cursor-ring');
-let mouseX = 0, mouseY = 0;
-let ringX = 0, ringY = 0;
-
-document.addEventListener('mousemove', e => {
-  mouseX = e.clientX; mouseY = e.clientY;
-  cursor.style.transform = `translate(${mouseX - 6}px, ${mouseY - 6}px)`;
-});
-
-function animateRing() {
-  ringX += (mouseX - ringX) * 0.12;
-  ringY += (mouseY - ringY) * 0.12;
-  cursorRing.style.transform = `translate(${ringX - 18}px, ${ringY - 18}px)`;
-  requestAnimationFrame(animateRing);
-}
+let mouseX = 0, mouseY = 0; let ringX = 0, ringY = 0;
+document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; cursor.style.transform = `translate(${mouseX - 6}px, ${mouseY - 6}px)`; });
+function animateRing() { ringX += (mouseX - ringX) * 0.12; ringY += (mouseY - ringY) * 0.12; cursorRing.style.transform = `translate(${ringX - 18}px, ${ringY - 18}px)`; requestAnimationFrame(animateRing); }
 animateRing();
 
-document.querySelectorAll('a, button, .skill-card, .project-card, .testi-card, .ai-feature').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursorRing.style.width = '56px';
-    cursorRing.style.height = '56px';
-    cursorRing.style.borderColor = 'rgba(0,210,255,0.8)';
-    cursor.style.opacity = '0.5';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursorRing.style.width = '36px';
-    cursorRing.style.height = '36px';
-    cursorRing.style.borderColor = 'rgba(0,210,255,0.5)';
-    cursor.style.opacity = '1';
-  });
-});
-
-// NAVBAR SCROLL
+// SCROLL & MENU
 const navbar = document.getElementById('navbar');
 const progress = document.getElementById('scroll-progress');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) navbar.classList.add('scrolled');
-  else navbar.classList.remove('scrolled');
-  
-  const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-  progress.style.width = pct + '%';
+  if (window.scrollY > 60) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+  progress.style.width = ((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100) + '%';
 });
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
 
-// MOBILE MENU
-function toggleMenu() {
-  document.getElementById('mobile-menu').classList.toggle('open');
-}
-
-// REVEAL ON SCROLL
+// REVEAL ANIMATION
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-  });
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
 }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 reveals.forEach(r => observer.observe(r));
 
-// CANVAS GRID BACKGROUND
-const canvas = document.getElementById('bg-canvas');
-const ctx = canvas.getContext('2d');
-
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+// INTERACTIVE TERMINAL LOGIC: Tabs
+function switchTab(tabId, btn) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  btn.classList.add('active');
 }
-resize();
-window.addEventListener('resize', resize);
 
-// Particles
-const particles = Array.from({length: 60}, () => ({
-  x: Math.random() * canvas.width,
-  y: Math.random() * canvas.height,
-  vx: (Math.random() - 0.5) * 0.3,
-  vy: (Math.random() - 0.5) * 0.3,
-  r: Math.random() * 1.5 + 0.3,
-  a: Math.random() * 0.5 + 0.1
-}));
+// ==========================================
+// FEATURE 1: AUDIO TO TEXT & AI SUMMARY
+// ==========================================
+let isRecordingAudio = false;
+let finalTranscript = '';
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition;
 
-function drawParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+if (SpeechRecognition) {
+  recognition = new SpeechRecognition();
+  recognition.continuous = true;
+  recognition.interimResults = true;
+  recognition.lang = 'id-ID'; // Supports Indo/English nicely
+
+  recognition.onresult = (event) => {
+    let interimTranscript = '';
+    for (let i = event.resultIndex; i < event.results.length; ++i) {
+      if (event.results[i].isFinal) finalTranscript += event.results[i][0].transcript + ' ';
+      else interimTranscript += event.results[i][0].transcript;
+    }
+    document.getElementById('transcript-box').innerHTML = finalTranscript + '<i style="color:#888">' + interimTranscript + '</i>';
+  };
+  recognition.onerror = (e) => { console.error(e); };
+}
+
+function toggleRecording() {
+  const btn = document.getElementById('btn-record');
+  if (!SpeechRecognition) return alert("Browser Anda tidak mendukung fitur Audio. Silakan gunakan Chrome/Edge versi terbaru.");
   
-  // Draw grid
-  ctx.strokeStyle = 'rgba(0,210,255,0.04)';
-  ctx.lineWidth = 1;
-  const grid = 80;
-  for (let x = 0; x < canvas.width; x += grid) {
-    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+  if (!isRecordingAudio) {
+    finalTranscript = '';
+    document.getElementById('transcript-box').innerHTML = 'Mendengarkan...';
+    document.getElementById('summary-output').style.display = 'none';
+    recognition.start();
+    isRecordingAudio = true;
+    btn.classList.add('recording');
+    btn.innerHTML = '⬛ Stop Recording';
+  } else {
+    recognition.stop();
+    isRecordingAudio = false;
+    btn.classList.remove('recording');
+    btn.innerHTML = '🔴 Start Recording';
   }
-  for (let y = 0; y < canvas.height; y += grid) {
-    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+}
+
+function generateSummary() {
+  const text = finalTranscript.trim();
+  const summaryBox = document.getElementById('summary-output');
+  if (!text || text.length < 15) {
+    alert("Silakan rekam suara Anda sedikit lebih panjang (minimal 1 kalimat) sebelum men-generate ringkasan.");
+    return;
   }
   
-  // Draw particles
-  particles.forEach(p => {
-    p.x += p.vx; p.y += p.vy;
-    if (p.x < 0) p.x = canvas.width;
-    if (p.x > canvas.width) p.x = 0;
-    if (p.y < 0) p.y = canvas.height;
-    if (p.y > canvas.height) p.y = 0;
+  // Fake Client-Side "AI" Extractive Summary Algorithm
+  // Removes common stop words and extracts longest/frequent words to simulate NLP keypoint extraction
+  const stopWords = ['saya','dan','atau','ke','dari','di','yang','untuk','ini','itu','dengan','pada','dalam'];
+  let words = text.toLowerCase().replace(/[^\w\s]/gi, '').split(' ').filter(w => w.length > 3 && !stopWords.includes(w));
+  let counts = {}; words.forEach(w => counts[w] = (counts[w] || 0) + 1);
+  let sortedWords = Object.keys(counts).sort((a,b) => counts[b] - counts[a]);
+  let keywords = sortedWords.slice(0, 3);
+  
+  summaryBox.style.display = 'block';
+  summaryBox.innerHTML = `
+    <div style="color:var(--cyan); margin-bottom:8px; font-weight:700;">🧠 Simulated AI Keypoints:</div>
+    <ul style="margin-left: 20px;">
+      <li><b>Topik Terdeteksi:</b> Pembicaraan mengenai <span style="color:#7FE89F; text-transform:capitalize;">${keywords.join(', ') || 'hal umum'}</span>.</li>
+      <li><b>Tindakan (Action Item):</b> Sistem mengidentifikasi kebutuhan tindak lanjut atau otomatisasi dari konteks di atas.</li>
+      <li><b>Status:</b> Data berhasil diubah menjadi teks dan siap diolah ke pipeline.</li>
+    </ul>
+  `;
+}
+
+// ==========================================
+// FEATURE 2: MACRO AUTOMATION GAME
+// ==========================================
+let score = 0;
+let isRecordingMacro = false;
+let isPlayingMacro = false;
+let macroEvents = [];
+let macroStartTime = 0;
+let automationTimeout;
+
+const gameArea = document.getElementById('game-area');
+const gameTarget = document.getElementById('game-target');
+const fakeCursor = document.getElementById('game-cursor');
+const scoreUI = document.getElementById('game-score');
+const statusUI = document.getElementById('game-status');
+const btnRec = document.getElementById('btn-macro-rec');
+const btnPlay = document.getElementById('btn-macro-play');
+
+// Randomize target position
+function moveTarget() {
+  const maxX = gameArea.clientWidth - 30;
+  const maxY = gameArea.clientHeight - 30;
+  gameTarget.style.left = Math.max(0, Math.random() * maxX) + 'px';
+  gameTarget.style.top = Math.max(0, Math.random() * maxY) + 'px';
+}
+setInterval(() => { if(!isRecordingMacro && !isPlayingMacro) moveTarget(); }, 2000);
+
+// Handle manual clicks inside the game area
+function handleGameClick(e) {
+  if (isPlayingMacro) return; // Prevent manual click during bot play
+  
+  const rect = gameArea.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  // Record click if recording
+  if (isRecordingMacro) {
+    macroEvents.push({ x: x, y: y, time: Date.now() - macroStartTime });
+  }
+
+  // Check collision with target
+  const targetRect = gameTarget.getBoundingClientRect();
+  const tx = targetRect.left - rect.left + 15; // center x
+  const ty = targetRect.top - rect.top + 15;  // center y
+  const dist = Math.hypot(x - tx, y - ty);
+
+  if (dist < 25) {
+    score += 10;
+    scoreUI.innerText = score;
+    moveTarget();
+    // Visual pop
+    gameTarget.style.transform = 'scale(1.5)';
+    setTimeout(() => gameTarget.style.transform = 'scale(1)', 150);
+  }
+}
+
+function toggleMacroRecord() {
+  if (isPlayingMacro) return alert("Hentikan otomatisasi sebelum merekam ulang!");
+  
+  if (!isRecordingMacro) {
+    isRecordingMacro = true;
+    macroEvents = [];
+    macroStartTime = Date.now();
+    statusUI.innerText = "Status: Recording...";
+    statusUI.style.color = "#FF5F57";
+    btnRec.classList.add('recording');
+    btnRec.innerText = "⬛ Stop Recording";
+    btnPlay.style.display = "none";
+  } else {
+    isRecordingMacro = false;
+    statusUI.innerText = "Status: Macro Saved";
+    statusUI.style.color = "var(--text-primary)";
+    btnRec.classList.remove('recording');
+    btnRec.innerText = "🔴 Record New Macro";
+    if(macroEvents.length > 0) btnPlay.style.display = "inline-flex";
+  }
+}
+
+function toggleMacroPlay() {
+  if (isRecordingMacro) return;
+  if (!isPlayingMacro) {
+    isPlayingMacro = true;
+    statusUI.innerText = "Status: BOT AUTOMATION ACTIVE ⚡";
+    statusUI.style.color = "var(--cyan)";
+    btnPlay.innerText = "⬛ Stop Automation";
+    btnRec.style.display = "none";
+    fakeCursor.style.opacity = 1;
+    runAutomationLoop();
+  } else {
+    isPlayingMacro = false;
+    clearTimeout(automationTimeout);
+    statusUI.innerText = "Status: Manual Mode";
+    statusUI.style.color = "var(--gold)";
+    btnPlay.innerText = "▶️ Run Automation";
+    btnRec.style.display = "inline-flex";
+    fakeCursor.style.opacity = 0;
+  }
+}
+
+function runAutomationLoop() {
+  if (!isPlayingMacro || macroEvents.length === 0) return;
+  let eventIndex = 0;
+  
+  function playNext() {
+    if (!isPlayingMacro) return;
+    if (eventIndex >= macroEvents.length) {
+      // Loop the macro aggressively (2x faster than recorded!)
+      automationTimeout = setTimeout(runAutomationLoop, 300);
+      return;
+    }
     
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(0,210,255,${p.a})`;
-    ctx.fill();
-  });
-  
-  // Connect nearby particles
-  particles.forEach((a, i) => {
-    particles.slice(i + 1).forEach(b => {
-      const d = Math.hypot(a.x - b.x, a.y - b.y);
-      if (d < 120) {
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
-        ctx.strokeStyle = `rgba(0,210,255,${0.08 * (1 - d/120)})`;
-        ctx.lineWidth = 0.8;
-        ctx.stroke();
+    let ev = macroEvents[eventIndex];
+    let nextDelay = eventIndex === 0 ? 0 : (ev.time - macroEvents[eventIndex-1].time) * 0.5; // 2x Speed
+    
+    automationTimeout = setTimeout(() => {
+      // Move fake cursor
+      fakeCursor.style.left = (ev.x - 7) + 'px';
+      fakeCursor.style.top = (ev.y - 7) + 'px';
+      
+      // Simulate Click effect
+      fakeCursor.style.transform = 'scale(0.5)';
+      setTimeout(() => fakeCursor.style.transform = 'scale(1)', 100);
+      
+      // Check collision
+      const rect = gameTarget.getBoundingClientRect();
+      const gRect = gameArea.getBoundingClientRect();
+      const tx = rect.left - gRect.left + 15;
+      const ty = rect.top - gRect.top + 15;
+      if (Math.hypot(ev.x - tx, ev.y - ty) < 25) {
+        score += 10;
+        scoreUI.innerText = score;
+        moveTarget();
       }
-    });
-  });
-  
-  requestAnimationFrame(drawParticles);
+      
+      eventIndex++;
+      playNext();
+    }, nextDelay);
+  }
+  playNext();
 }
-drawParticles();
 
-// Typing effect in hero
-const titles = [
-  "I Build Systems That Work While You Sleep.",
-  "Automation Specialist & BI Engineer.",
-  "Turning Chaos Into Elegant Systems.",
-];
-
-// Smooth hover tilt on cards
-document.querySelectorAll('.skill-card, .project-card, .exp-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    card.style.transform = `translateY(-6px) rotateX(${y * -6}deg) rotateY(${x * 6}deg)`;
-    card.style.transition = 'none';
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-    card.style.transition = '';
-  });
-});
 </script>
 
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'en',
-      // Termasuk: Inggris (en), Indonesia (id), China Mandari (zh-CN), Melayu (ms), Tamil (ta) 
-      // untuk meng-cover target audiens dari Singapore secara utuh
       includedLanguages: 'en,id,zh-CN,ms,ta',
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
